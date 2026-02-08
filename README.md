@@ -1,7 +1,8 @@
 # app_biblioteca
-# App Biblioteca - Flutter & Firebase
+# App Biblioteca Flutter & Firebase
 
 Aplicativo Mobile desenvolvido para o controle de livros em uma biblioteca, juntando autenticação e banco de dados (firebase).
+Entregue a matéria de Desenvolvimento de Aplicativos Móveis, Prof. Antonio Marcio.
 
 ## Funcionalidades
 * **Autenticação**: Cadastro e Login de usuários via Firebase Auth.
