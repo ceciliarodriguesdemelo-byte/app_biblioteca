@@ -15,7 +15,9 @@ Entregue a matéria de Desenvolvimento de Aplicativos Móveis, Prof. Antonio Mar
 * [Firebase Authentication](https://firebase.google.com/products/auth) - Gestão de usuários
 * [Cloud Firestore](https://firebase.google.com/products/firestore) - Banco de Dados NoSQL
 
-## 📌 Como rodar o projeto
+## Como rodar o projeto
 1. Certifique-se de ter o Flutter instalado em sua máquina.
-2. Clone o repositório.
+2. Clone o repositório:
+```bash
+   git clone [https://github.com/ceciliarodriguesdemelo-byte/app_biblioteca.git](https://github.com/ceciliarodriguesdemelo-byte/app_biblioteca.git)
 
