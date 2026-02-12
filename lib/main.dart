@@ -128,7 +128,21 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const LivroFormScreen()), 
                 );
               },
+            ), 
+            ElevatedButton.icon(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
+              );
+            },
+            icon: const Icon(Icons.list_alt),
+            label: const Text('Ver Lista de Livros'),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color.fromARGB(255, 202, 138, 19), 
+              minimumSize: const Size(200, 50),
             ),
+          ),
           ],
         ),
       ),
