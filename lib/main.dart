@@ -5,6 +5,7 @@ import 'screens/login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'models/livro.dart';
 import 'services/database_service.dart';
+import 'package:app_biblioteca/screens/livro_form_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -99,6 +100,37 @@ class HomeScreen extends StatelessWidget {
         onPressed: () {
         },
         child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Menu Principal")),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text("Bem-vindo ao App da Biblioteca!", style: TextStyle(fontSize: 20)),
+            const SizedBox(height: 30),
+            ElevatedButton(
+              child: const Text("Ir para Cadastro de Livros"),
+              onPressed: () {
+                // Aqui você vai colocar o nome da tela de cadastro
+                // que antes estava direto no seu Login
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LivroFormScreen()), 
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

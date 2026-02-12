@@ -1,3 +1,4 @@
+import 'package:app_biblioteca/main.dart';
 import 'package:flutter/material.dart';
 import '../models/livro.dart';
 import '../services/database_service.dart';
@@ -44,7 +45,22 @@ class _LivroFormScreenState extends State<LivroFormScreen> {
         await _dbService.updateLivro(novoLivro);
       }
 
-      if (mounted) Navigator.pop(context);
+      if (mounted) {
+      // 1. Mostra o sucesso
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Cadastrado com sucesso!'), backgroundColor: Colors.green),
+      );
+
+      // 2. Espera um pouquinho para o Flutter processar a barra antes de mudar de tela
+      Future.delayed(const Duration(milliseconds: 500), () {
+        if (mounted) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => const HomeScreen()),
+          );
+        }
+      });
+    }
     }
   }
 

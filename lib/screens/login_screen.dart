@@ -1,6 +1,7 @@
+import 'package:app_biblioteca/main.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'home_screen.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -25,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const HomeScreen()),
+      MaterialPageRoute(builder: (context) => const HomePage()),
     );
 
   } catch (e) {
@@ -63,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const HomeScreen()),
+      MaterialPageRoute(builder: (context) => const HomePage()),
     );
   } on FirebaseAuthException catch (e) {
     if (!mounted) return;
